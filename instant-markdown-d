@@ -69,7 +69,7 @@ let md = new MarkdownIt({
       return str;
     }
   }
-}).use(taskLists);
+}).use(require('markdown-it-deflist')).use(taskLists);
 
 if (argv.mathjax) md.use(require('markdown-it-mathjax')());
 
